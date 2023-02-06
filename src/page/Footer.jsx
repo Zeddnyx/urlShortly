@@ -62,10 +62,10 @@ const img2 = 'w-full h-[200px] hidden bg-darkViolet xl:flex'
 
 const divtextjmg = 'absolute flex flex-col items-center gap-4 font-pop text-center w-full -my-40 xl:-my-[140px]'
 const h1 = 'text-xl text-[#fff]'
-const btn = 'py-2 bg-cyan rounded-full w-40 outline-none'
+const btn = 'py-2 bg-cyan rounded-full w-40 outline-none text-[#fff]'
 
 const footer = 'py-4 grid text-center bg-veryDarkViolet'
-const divFooter = 'grid gap-4 xl:grid-cols-5'
+const divFooter = 'grid gap-4 text-[#fff] xl:grid-cols-5'
 const footerH1 = 'font-pop text-3xl'
 
 const ol = 'flex flex-col gap-2 my-3'
