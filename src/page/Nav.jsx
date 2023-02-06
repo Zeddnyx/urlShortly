@@ -48,4 +48,5 @@ const navbar = 'px-5 z-50 grid'
 const div = 'w-full top-0 left-0 fixed flex justify-between px-5 items-center py-3 bg-[#fff]'
 
 const menu = 'text-gray md:hidden'
-const ulMobile = 'md:hidden mt-20 z-40 fixed top-10 w-[90%] flex flex-col gap-5 bg-darkViolet rounded-xl text-center py-10'
+const ulMobile = 'md:hidden mt-20 z-40 fixed top-0 inset-x-0 mx-auto w-[90%] flex flex-col gap-5 bg-darkViolet rounded-xl text-center py-10'
+// inset-x-0 and mx-au to center fixed position
