@@ -36,7 +36,7 @@ export default function Nav() {
       <Li li='Resource' />
       <div className='h-[2px] w-60 mx-auto bg-grayViolet'></div>
       <div className='flex flex-col gap-3 font-pop items-center'>
-        <button>Login</button>
+        <button className='text-gray'>Login</button>
         <button className='w-60 py-3 bg-cyan rounded-full'>Sign Up</button>
       </div>
     </ul>
