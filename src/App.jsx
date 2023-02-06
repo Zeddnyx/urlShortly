@@ -1,6 +1,7 @@
 import Nav from './page/Nav'
 import Home from './page/Home'
 import Info from './page/InfoStatistic'
+import Footer from './page/Footer'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Info />
     </div>
+    <Footer />
   </div>
 }
 export default App

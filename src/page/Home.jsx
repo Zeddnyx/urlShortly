@@ -20,7 +20,7 @@ export default function Home() {
 
     <form className={form} onSubmit={handleForm}>
       <input className={input} type="text" placeholder='Shorten a link here...' />
-      <button className={btnInput} type="submit">Shorton It!</button>
+      <button className={btnInput} type="submit">Shorten It!</button>
     </form>
   </header>
 }
@@ -34,5 +34,5 @@ const p = 'text-sm font-normal text-gray sm:px-12'
 const btn = 'bg-cyan w-[170px] mx-auto py-4 font-pop rounded-full text-[#fff]'
 
 const form = 'mt-20 bg-darkViolet flex flex-col gap-5 p-5 rounded-lg md:flex-row'
-const input = 'p-3 bg-[#eee] text-gray rounded-lg outline-none md:w-full'
-const btnInput = 'bg-cyan rounded-lg py-3 outline-none font-pop md:w-60'
+const input = 'p-3 bg-[#fff] text-gray rounded-lg outline-none md:w-full'
+const btnInput = 'bg-cyan text-[#fff] rounded-lg py-3 outline-none font-pop md:w-60'

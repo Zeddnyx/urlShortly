@@ -1,8 +1,6 @@
 import Brand from '../asset/images/icon-brand-recognition.svg'
 import Detail from '../asset/images/icon-detailed-records.svg'
 import Fully from '../asset/images/icon-fully-customizable.svg'
-import BgMobile from '../asset/images/bg-boost-mobile.svg'
-import BgDesktop from '../asset/images/bg-boost-desktop.svg'
 
 export default function Info() {
 
@@ -45,11 +43,11 @@ export default function Info() {
 
 const section = 'mt-36 text-center items-center flex flex-col'
 const h1 = 'font-pop text-2xl my-3'
-const article = 'px-3 text-gray'
+const article = 'px-3 text-grayViolet'
 
 const parentCard = 'grid grid-cols-1 xl:grid-cols-3 xl:gap-10 xl:h-[470px]'
-const card = 'bg-[#eee] mt-20 rounded shadow-lg grid grid-cols-1 w-full place-items-center text-center'
-const divImg = 'bg-darkViolet my-2 rounded-full p-5 w-20'
+const card = 'bg-[#fff] mt-20 rounded shadow-lg grid grid-cols-1 w-full place-items-center text-center'
+const divImg = 'bg-darkViolet mt-4 rounded-full p-5 w-20'
 
 const divText = 'px-10 py-5'
 const divH1 = 'font-pop text-xl py-2 text-veryDarkViolet'
