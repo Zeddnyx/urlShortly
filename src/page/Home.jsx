@@ -20,7 +20,7 @@ export default function Home() {
 
     <form className={form} onSubmit={handleForm}>
       <input className={input} type="text" placeholder='Shorten a link here...' />
-      <button className={btnInput} type="submit">Shorten It!</button>
+      <button className={btnInput} type="submit">Shorton It!</button>
     </form>
   </header>
 }

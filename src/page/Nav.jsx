@@ -45,7 +45,7 @@ export default function Nav() {
 }
 
 const navbar = 'px-5 z-50 grid'
-const div = 'w-full top-0 left-0 fixed flex justify-between px-5 items-center py-3 bg-[#eee]'
+const div = 'w-full top-0 left-0 fixed flex justify-between px-5 items-center py-3 bg-[#fff]'
 
 const menu = 'text-gray md:hidden'
-const ulMobile = 'md:hidden mt-20 z-40 fixed self-center w-[90%] flex flex-col gap-5 bg-darkViolet rounded-xl text-center py-10'
+const ulMobile = 'md:hidden mt-20 z-40 fixed top-20 w-[90%] flex flex-col gap-5 bg-darkViolet rounded-xl text-center py-10'
