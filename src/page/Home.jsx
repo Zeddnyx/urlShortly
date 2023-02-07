@@ -1,21 +1,41 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Orang from '../asset/images/illustration-working.svg'
 import BgMobile from '../asset/images/bg-shorten-mobile.svg'
 import BgDesktop from '../asset/images/bg-shorten-desktop.svg'
 
+const tok = '1c1d7d2d9b8445ca14c823503b7f814b3771fe3f'
+
 export default function Home() {
-  const [link, setLink] = useState(false)
+  const [user, setUser] = useState(false)
   const [dataInput, setDataInput] =  useState('')
 
   const handleForm = e => {
     e.preventDefault()
 
     if (dataInput.length == 0) {
-      setLink(!link)
+      setUser(!link)
     } if (dataInput.length > 0) {
-      setLink(false)
+      setUser(false)
     }
+
+    short(dataInput)
   }
+
+  // error 403 idk whats wrong
+  const short = async shortly => {
+    const api = await fetch('https://api-ssl.bitly.com/v4/shorten', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tok}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ "long_url": `${shortly}`, "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" })
+    })
+    const resp = await api
+    console.log(resp)
+    console.log(dataInput)
+  }
+
   return <header  className={head}>
     <div className={divImg}>
       <img src={Orang} alt="illustration-working" />
@@ -30,10 +50,10 @@ export default function Home() {
     </div>
 
     <form className={form} onSubmit={handleForm}>
-      <input className={!link ? `${input}` : `${inputErr}`} onChange={e => setDataInput(e.target.value)} 
+      <input className={!user ? `${input}` : `${inputErr}`} onChange={e => setDataInput(e.target.value)} 
         name='input' type="text" placeholder='Shorten a link here...' 
       />
-      <label className={!link ? `hidden` : `inline text-red`} htmlFor="input">please add a link</label>
+      <label className={!user ? `hidden` : `inline text-red`} htmlFor="input">please add a link</label>
       <button className={btnInput} type="submit">Shorten It!</button>
     </form>
   </header>
