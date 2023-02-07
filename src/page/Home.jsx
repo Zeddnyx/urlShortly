@@ -21,7 +21,6 @@ export default function Home() {
     short(dataInput)
   }
 
-  // error 403 idk whats wrong
   const short = async shortly => {
     const api = await fetch('https://api-ssl.bitly.com/v4/shorten', {
       method: 'POST',
@@ -29,7 +28,11 @@ export default function Home() {
         'Authorization': `Bearer ${tok}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ "long_url": `${shortly}`, "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" })
+      body: JSON.stringify({ 
+        "long_url": `${shortly}`,
+        "domain": "bit.ly",
+        "group_guid": "Ba1bc23dE4F"
+      })
     })
     const resp = await api
     console.log(resp)
