@@ -3,40 +3,46 @@ import Orang from '../asset/images/illustration-working.svg'
 import BgMobile from '../asset/images/bg-shorten-mobile.svg'
 import BgDesktop from '../asset/images/bg-shorten-desktop.svg'
 
-const tok = '1c1d7d2d9b8445ca14c823503b7f814b3771fe3f'
 
 export default function Home() {
   const [user, setUser] = useState(false)
   const [dataInput, setDataInput] =  useState('')
+  const [result, setResult] = useState()
+  const [loading, setLoading] = useState(false)
+
+  const short = async shortly => {
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer 1c1d7d2d9b8445ca14c823503b7f814b3771fe3f`);
+    myHeaders.append("Content-Type", "application/json");
+    const raw = JSON.stringify({
+      "long_url": `${shortly}`,
+      "domain": "bit.ly",
+      "group_guide": "Ba1bc23dE4F"
+    });
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    setLoading(true)
+    const api = await fetch('https://api-ssl.bitly.com/v4/shorten', requestOptions)
+    if(!api){
+      return
+    }
+    const resp = await api.json()
+    setResult(resp.link)
+    setLoading(false)
+  }
 
   const handleForm = e => {
     e.preventDefault()
-
     if (dataInput.length == 0) {
-      setUser(!link)
-    } if (dataInput.length > 0) {
+      setUser(!user)
+    } if (dataInput.length != 0) {
       setUser(false)
     }
-
-    short(dataInput)
-  }
-
-  const short = async shortly => {
-    const api = await fetch('https://api-ssl.bitly.com/v4/shorten', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${tok}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ 
-        "long_url": `${shortly}`,
-        "domain": "bit.ly",
-        "group_guid": "Ba1bc23dE4F"
-      })
-    })
-    const resp = await api
-    console.log(resp)
-    console.log(dataInput)
+    return short(dataInput)
   }
 
   return <header  className={head}>
@@ -59,6 +65,12 @@ export default function Home() {
       <label className={!user ? `hidden` : `inline text-red`} htmlFor="input">please add a link</label>
       <button className={btnInput} type="submit">Shorten It!</button>
     </form>
+
+    {loading
+      ? <p className='w-full p-5 bg-darkViolet rounded-md mt-5 font-bold text-center animate-pulse'>loading...</p>
+      : <p className='w-full p-5 bg-darkViolet rounded-md mt-5 font-bold text-center'>{result}</p>
+    }
+
   </header>
 }
 
@@ -74,3 +86,5 @@ const form = 'mt-20 bg-darkViolet flex flex-col gap-5 p-5 rounded-lg md:flex-row
 const input = 'p-3 bg-[#fff] text-gray rounded-lg outline-none md:w-full'
 const inputErr = 'p-3 bg-[#fff] text-red border-2 border-red rounded-lg outline-none md:w-full'
 const btnInput = 'bg-cyan text-[#fff] rounded-lg py-3 outline-none font-pop md:w-60'
+
+const hidden = 'hidden'

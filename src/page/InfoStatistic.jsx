@@ -45,8 +45,8 @@ const section = 'mt-36 text-center items-center flex flex-col'
 const h1 = 'font-pop text-2xl my-3'
 const article = 'px-3 text-grayViolet'
 
-const parentCard = 'grid grid-cols-1 xl:grid-cols-3 xl:gap-10 xl:h-[470px] xl:bg-[#eee]'
-const card = 'bg-[#fff] my-20 rounded shadow-lg grid grid-cols-1 w-full place-items-center text-center'
+const parentCard = 'grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20 lg:h-[470px] mt-10'
+const card = 'bg-[#fff] rounded shadow-lg flex flex-col justify-center w-full place-items-center text-center px-16 sm:px-28 md:px-28 lg:px-7'
 const divImg = 'bg-darkViolet mt-4 rounded-full p-5 w-20'
 
 const divText = 'px-10 py-5'
