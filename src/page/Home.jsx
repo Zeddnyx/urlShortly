@@ -59,10 +59,11 @@ export default function Home() {
     </div>
 
     <form className={form} onSubmit={handleForm}>
+      <span className='text-xs px-1'>ex: https://google.com</span>
       <input className={!user ? `${input}` : `${inputErr}`} onChange={e => setDataInput(e.target.value)} 
         name='input' type="text" placeholder='Shorten a link here...' 
       />
-      <label className={!user ? `hidden` : `inline text-red`} htmlFor="input">please add a link</label>
+      <label className={!user ? `hidden` : `inline text-red text-xs`} htmlFor="input">please input a link!</label>
       <button className={btnInput} type="submit">Shorten It!</button>
     </form>
 
@@ -82,7 +83,7 @@ const h1 = 'text-3xl text-veryDarkViolet font-pop'
 const p = 'text-sm font-normal text-gray sm:px-12'
 const btn = 'bg-cyan w-[170px] mx-auto py-4 font-pop rounded-full text-[#fff]'
 
-const form = 'mt-20 bg-darkViolet flex flex-col gap-5 p-5 rounded-lg md:flex-row'
+const form = 'mt-20 bg-darkViolet flex flex-col gap-3 p-5 rounded-lg md:flex-row'
 const input = 'p-3 bg-[#fff] text-gray rounded-lg outline-none md:w-full'
 const inputErr = 'p-3 bg-[#fff] text-red border-2 border-red rounded-lg outline-none md:w-full'
 const btnInput = 'bg-cyan text-[#fff] rounded-lg py-3 outline-none font-pop md:w-60'

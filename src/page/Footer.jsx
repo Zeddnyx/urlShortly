@@ -20,8 +20,8 @@ export default function Footer() {
     </div>
 
     <footer className={footer}>
+      <h1 className={footerH1}>Shortly</h1>
       <div className={divFooter}>
-        <h1 className={footerH1}>Shortly</h1>
 
         <ol className={ol}>
           <h3 className={footerH3}>Features</h3>
@@ -64,11 +64,11 @@ const divtextjmg = 'absolute flex flex-col items-center gap-4 font-pop text-cent
 const h1 = 'text-xl text-[#fff]'
 const btn = 'py-2 bg-cyan rounded-full w-40 outline-none text-[#fff]'
 
-const footer = 'py-4 grid text-center bg-veryDarkViolet'
-const divFooter = 'grid gap-4 text-[#fff] xl:grid-cols-5'
+const footer = 'py-4 grid text-center bg-veryDarkViolet w-full'
+const divFooter = 'grid gap-4 text-[#fff] place-items-center justify-center grid-cols-2 md:grid-cols-3 xl:grid-cols-4'
 const footerH1 = 'font-pop text-3xl'
 
 const ol = 'flex flex-col gap-2 my-3'
 const footerH3 = 'font-pop text-md'
 
-const footerSosmed = 'mt-10 flex justify-center gap-6 h-6'
+const footerSosmed = 'mt-10 flex justify-center gap-6 h-6 items-center md:col-span-3'
