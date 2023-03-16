@@ -68,8 +68,8 @@ export default function Home() {
     </form>
 
     {loading
-      ? <p className='w-full p-5 bg-darkViolet rounded-md mt-5 font-bold text-center animate-pulse'>loading...</p>
-      : <p className='w-full p-5 bg-darkViolet rounded-md mt-5 font-bold text-center'>{result}</p>
+      ? <p className='w-full text-white p-5 bg-darkViolet rounded-md mt-5 font-bold text-center animate-pulse'>loading...</p>
+      : <p className='w-full text-white p-5 bg-darkViolet rounded-md mt-5 font-bold text-center'>{result}</p>
     }
 
   </header>
