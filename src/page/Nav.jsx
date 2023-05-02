@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Logo from '../asset/images/logo.svg'
-import { FiMenu } from 'react-icons/fi'
-import { AiOutlineClose } from 'react-icons/ai'
+// import { FiMenu } from 'react-icons/fi'
+// import { AiOutlineClose } from 'react-icons/ai'
 
 export default function Nav() {
   const [nav, setNav] = useState(false)
@@ -27,7 +27,7 @@ export default function Nav() {
       </div>
 
       <div onClick={handleNav} className={menu}>
-      {!nav ? <FiMenu size='25' /> : <AiOutlineClose size='25' /> }
+      {!nav ? "Menu" : "Close" }
       </div>
     </div>
 

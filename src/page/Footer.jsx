@@ -64,8 +64,8 @@ const divtextjmg = 'absolute flex flex-col items-center gap-4 font-pop text-cent
 const h1 = 'text-xl text-[#fff]'
 const btn = 'py-2 bg-cyan rounded-full w-40 outline-none text-[#fff]'
 
-const footer = 'py-4 grid text-center bg-veryDarkViolet w-full'
-const divFooter = 'grid gap-4 text-[#fff] place-items-center justify-center grid-cols-2 md:grid-cols-3 xl:grid-cols-4'
+const footer = 'py-4 grid text-center bg-veryDarkViolet w-full place-items-center'
+const divFooter = 'grid gap-x-40 lg:gap-x-80 text-[#fff] place-items-center grid-cols-2 md:grid-cols-3'
 const footerH1 = 'font-pop text-3xl'
 
 const ol = 'flex flex-col gap-2 my-3'
